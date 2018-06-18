@@ -20,25 +20,26 @@ counter = 0
 mass = []
 
 if (len(sys.argv) < 2):
-	print "Too few arguments"
-	sys.exit(1)
+  print "Too few arguments"
+  sys.exit(1)
 
 try:
-	a=int(sys.argv[1])
+  a=int(sys.argv[1])
 except ValueError:
-	print "Multiplier is not a number"
-	sys.exit(1)
+  print "Multiplier is not a number"
+  sys.exit(1)
 
 if(a<2):
-	print "Multiplier is smaller than 2"
-	sys.exit(1)
+  print "Multiplier is smaller than 2"
+  sys.exit(1)
 
 for line in sys.stdin:
-	mass.append(line)
-	counter = counter + 1
+  mass.append(line)
+  counter = counter + 1
 
-print mass[0],
-print mass[1],
+print(mass[0]),
+scale=float(mass[1])
+print('{0:.9f}'.format(scale))
 
 tmp=mass[2].split()
 
@@ -59,34 +60,37 @@ c2=float(tmp[1])
 c3=float(tmp[2])
 
 #multiply vector a by factor a
-print str(a1*a) + "   " + str(a2*a) + "   " + str(a3*a)
-print mass[3],
-print mass[4],
+print('{0:.9f}  {1:.9f}  {2:.9f}'.format(a1*a, a2*a, a3*a))
+print('{0:.9f}  {1:.9f}  {2:.9f}'.format(b1, b2, b3))
+print('{0:.9f}  {1:.9f}  {2:.9f}'.format(c1, c2, c3))
 
-print mass[5],
+## this does not change
+print(mass[5]),
 oldd=[int(x) for x in mass[6].split()]
 newd=[a*int(x) for x in mass[6].split()]
 
-print "   ",
+print("  "),
 for x in newd:
-	print str(x) + "   ",
+  print(str(x) + "  "),
 
-print ""
-print mass[7],
+print("")
+print(mass[7]),
+
+## TODO this works only with Direct method probably
 
 atoms1=[]
 atoms2=[]
 atoms3=[]
 
 for i in xrange(0,sum(oldd),1):
-	tmp = mass[8+i].split()
-	atoms1.append(float(tmp[0]))
-	atoms2.append(float(tmp[1]))
-	atoms3.append(float(tmp[2]))
+  tmp = mass[8+i].split()
+  atoms1.append(float(tmp[0]))
+  atoms2.append(float(tmp[1]))
+  atoms3.append(float(tmp[2]))
 
 for i in xrange(0,sum(oldd),1):
-	for j in xrange(0,a,1):
-		print str((atoms1[i]+j*a1)/a) + "   " + str(atoms2[i]+j*a2) + "   " + str(atoms3[i]+j*a3)
+  for j in xrange(0,a,1):
+    print('{0:.9f}  {1:.9f}  {2:.9f}'.format((atoms1[i] + float(j))/a, atoms2[i], atoms3[i]))
 
-print 
+print("") 
 
