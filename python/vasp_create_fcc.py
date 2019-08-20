@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 # Author: Artur Tamm arturt@ut.ee
 
@@ -42,18 +42,18 @@ if args.system == None:
 else:
 	system=args.system
 
-print system
-print "   " + lattice
+print(system)
+print("   " + lattice)
 #bcc lattice vectors
-print "%.10f   %.10f   %.10f"%(1.0,0.0,0.0)
-print "%.10f   %.10f   %.10f"%(0.0,1.0,0.0)
-print "%.10f   %.10f   %.10f"%(0.0,0.0,1.0)
-print "   " + element
-print "   " + str(4)
-print "Direct"
-print "%.10f   %.10f   %.10f"%(0.0,0.0,0.0)
-print "%.10f   %.10f   %.10f"%(0.5,0.5,0.0)
-print "%.10f   %.10f   %.10f"%(0.5,0.0,0.5)
-print "%.10f   %.10f   %.10f"%(0.0,0.5,0.5)
-print
+print("%.10f   %.10f   %.10f"%(1.0,0.0,0.0))
+print("%.10f   %.10f   %.10f"%(0.0,1.0,0.0))
+print("%.10f   %.10f   %.10f"%(0.0,0.0,1.0))
+print("   " + element)
+print("   " + str(4))
+print("Direct")
+print("%.10f   %.10f   %.10f"%(0.0,0.0,0.0))
+print("%.10f   %.10f   %.10f"%(0.5,0.5,0.0))
+print("%.10f   %.10f   %.10f"%(0.5,0.0,0.5))
+print("%.10f   %.10f   %.10f"%(0.0,0.5,0.5))
+print("")
 
