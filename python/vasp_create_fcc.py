@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Author: Artur Tamm arturt@ut.ee
+# Author: Artur Tamm artur.tamm.work@gmail.com
 
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the 
